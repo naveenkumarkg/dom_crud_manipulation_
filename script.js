@@ -24,7 +24,7 @@ function addItem(e) {
 
     // Create new delete btn for li
     var button = document.createElement('button')
-    button.className = 'btn btn-danger float-end';
+    button.className = 'btn btn-danger float-end delete';
     button.appendChild(document.createTextNode('X'));
     li.appendChild(button)
 
