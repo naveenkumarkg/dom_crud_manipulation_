@@ -26,11 +26,13 @@
     <header id="main-header" class="bg-success text-white p-4 mb-3 ">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h1 class="animate__animated animate__backInLeft ">Item Lister</h1>
+                <div class="col-md-6 d-flex align-items-center animate__animated animate__backInLeft">
+                    <img class="me-4" width="70" height="50" src="./yks_logo.png" alt="YKS Logo" >
+                    <h1>YKS TODO</h1>
+                    
                 </div>
                 <div class="col-md-6 align-self-center">
-                    <input type="search" placeholder="Search Items..." id="filter" class="form-control">
+                    <input type="search" placeholder="Search from the List ..." id="filter" class="form-control">
                 </div>
 
             </div>
@@ -38,7 +40,7 @@
     </header>
     <main class="container">
         <div class="card card-body">
-            <h2>Add Items</h2>
+            <h2>Add Items to List</h2>
             <div class="row">
                 <div class="col-4">
                     <form id="addForm" class="form-inline mb-3 col-sm-8">
@@ -49,7 +51,7 @@
             </div>
 
             <h2 class="title">
-                Items 
+                List 
             </h2>
             <ul id="items" class="list-group ">
                 <li class="list-group-item ">Item 1 <button class="btn btn-danger float-end delete"id="1" >X</button></li>
