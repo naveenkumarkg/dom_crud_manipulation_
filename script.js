@@ -3,13 +3,10 @@ var newItem = document.getElementById('item');
 var items = document.getElementById('items');
 var filter = document.getElementById('filter');
 
-// Event Listener
-form.addEventListener('submit', addItem);
-items.addEventListener('click', removeItem);
-filter.addEventListener('keyup', filterItem)
 
 
-function addItem(e) {
+
+ var addItem = (e)=> {
     // Override default properties of submit button
     e.preventDefault();
 
@@ -32,7 +29,7 @@ function addItem(e) {
     items.appendChild(li);
 }
 
-function removeItem(e) {
+var removeItem  =(e) =>{
     if (e.target.classList.contains('delete')) {
         if (confirm('Do you want to remove')) {
             var li = e.target.parentElement
@@ -41,17 +38,14 @@ function removeItem(e) {
     }
 }
 
-function filterItem(e) {
+var filterItem =(e) =>{
     console.log(e.target.value)
-
     // convert text to lowercase
     var text = e.target.value.toLowerCase();
-
     // get the list of items
     var itemList = items.getElementsByTagName('li');
-
     // conver to array
-    Array.from(itemList).forEach(function (item) {
+    Array.from(itemList).forEach((item) =>{
         var itemName = item.firstChild.textContent;
            if(itemName.toLocaleLowerCase().indexOf(text) !== -1){
             item.style.display = 'block'
@@ -64,9 +58,13 @@ function filterItem(e) {
  
 
 }
-
+// Event Listener
+form.addEventListener('submit', addItem);
+items.addEventListener('click', removeItem);
+filter.addEventListener('keyup', filterItem)
 
 
 
 
 {/* <li class="list-group-item ">Item 6 <button class="btn btn-danger float-end">X</button></li> */ }
+
